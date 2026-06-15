@@ -18,8 +18,19 @@ composer install
 
 **Direkt ins aktuelle Verzeichnis klonen (kein Unterordner):**
 
+Das Zielverzeichnis muss leer sein:
+
 ```bash
 git clone https://github.com/theandy/Adress-Aufkleber.git .
+composer install
+```
+
+Ist das Verzeichnis nicht leer, geht es so:
+
+```bash
+git init
+git remote add origin https://github.com/theandy/Adress-Aufkleber.git
+git pull origin master
 composer install
 ```
 
