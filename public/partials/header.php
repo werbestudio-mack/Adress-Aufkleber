@@ -13,11 +13,13 @@ $pageTitle = $pageTitle ?? 'LabelMaker';
 
 
     <link href="assets/css/styles.css" rel="stylesheet">
+    <style>body{background:#f4f6f9}</style>
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark">
     <div class="container">
-        <span class="navbar-brand mb-0 h1">LabelMaker</span>
+        <span class="navbar-brand mb-0 h1"><i class="fa-solid fa-tags me-2"></i>LabelMaker</span>
+        <span class="text-secondary small">Avery Zweckform 3481 · CSV → PDF</span>
     </div>
 </nav>
-<main class="container my-4">
+<main class="container my-4" style="max-width:860px">

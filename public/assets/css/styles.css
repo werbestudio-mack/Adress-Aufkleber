@@ -1,17 +1,51 @@
-.badge code {
-  color: #ffffff;
+.upload-zone {
+  border: 2px dashed #dee2e6;
+  border-radius: 0.75rem;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  background: #fafafa;
+}
+.upload-zone:hover {
+  border-color: #0d6efd;
+  background: #f0f5ff;
 }
 
-.card span.help {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  font-size: 1.5rem;
-}
-.card span.help.inline {
-  position: relative;
-  font-size: 1rem;
-  margin-left: 5px;
+.upload-icon {
+  font-size: 2.5rem;
+  color: #adb5bd;
+  display: block;
+  margin-bottom: 0.75rem;
 }
 
-/*# sourceMappingURL=styles.css.map */
+.generate-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+}
+
+.record-count {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+.record-count__number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d6efd;
+  line-height: 1;
+}
+.record-count__label {
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+.accordion-button {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
