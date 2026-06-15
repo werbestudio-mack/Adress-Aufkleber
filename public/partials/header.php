@@ -17,9 +17,15 @@ $pageTitle = $pageTitle ?? 'LabelMaker';
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark">
-    <div class="container">
+    <div class="container" style="max-width:860px">
         <span class="navbar-brand mb-0 h1"><i class="fa-solid fa-tags me-2"></i>LabelMaker</span>
-        <span class="text-secondary small">Avery Zweckform 3481 · CSV → PDF</span>
+        <div class="d-flex align-items-center gap-3">
+            <span class="text-secondary small d-none d-sm-inline">Avery Zweckform 3481 &middot; CSV &rarr; PDF</span>
+            <div class="form-check form-switch mb-0 d-flex align-items-center gap-2">
+                <input class="form-check-input" type="checkbox" id="easyToggle" role="switch" style="cursor:pointer">
+                <label class="form-check-label text-white-50 small" for="easyToggle">Easy Mode</label>
+            </div>
+        </div>
     </div>
 </nav>
 <main class="container my-4" style="max-width:860px">

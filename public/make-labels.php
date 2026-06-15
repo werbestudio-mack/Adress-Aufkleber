@@ -252,7 +252,7 @@ function render_mapping_form(array $args): void {
     echo '<input type="hidden" name="confirm_delete"   id="confirm_delete"   value="">';
 
     /* ---- Presets ---- */
-    echo '<div class="card shadow-sm">';
+    echo '<div class="card shadow-sm" id="preset-card">';
     echo '  <div class="card-header d-flex align-items-center justify-content-between py-2">';
     echo '    <span class="fw-semibold"><i class="fa-solid fa-sliders me-2 text-primary"></i>Preset <i class="fa-solid fa-circle-question text-muted ms-1" style="font-size:.85rem;cursor:pointer" data-bs-toggle="popover" data-bs-trigger="click" data-bs-placement="right" data-bs-title="Was ist ein Preset?" data-bs-content="Ein Preset speichert deine Einstellungen (Spalten-Zuordnung, Schrift, Raender) unter einem Namen. Beim naechsten Upload reicht es, das Preset auszuwaehlen - alles wird sofort wiederhergestellt. Du kannst ein Preset auch als Standard setzen, damit es bei jedem Upload automatisch gilt."></i></span>';
     if ($defaultPreset) {
