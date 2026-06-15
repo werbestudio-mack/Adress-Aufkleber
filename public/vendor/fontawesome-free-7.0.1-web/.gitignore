@@ -1,0 +1,8 @@
+# Nur css/ und webfonts/ werden für die Webapp gebraucht
+js/
+metadata/
+scss/
+sprites/
+sprites-full/
+svgs/
+svgs-full/

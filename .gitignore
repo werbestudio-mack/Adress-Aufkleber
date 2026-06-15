@@ -1,0 +1,13 @@
+# PHP dependencies — rebuild with: composer install
+/vendor/
+
+# IDE & tools
+/.idea/
+/.claude/
+
+# Uploaded CSV files (temp, server-side)
+/var/uploads/
+
+# OS
+.DS_Store
+Thumbs.db

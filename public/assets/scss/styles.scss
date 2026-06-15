@@ -1,0 +1,28 @@
+.badge {
+
+  code {
+    color: #ffffff;
+  }
+
+}
+
+.card {
+
+  span.help {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 1.5rem;
+
+    &.inline {
+      position: relative;
+      font-size: 1rem;
+      margin-left: 5px;
+    }
+
+  }
+
+
+}
+
+
