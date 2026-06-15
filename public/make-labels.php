@@ -185,6 +185,29 @@ function render_upload_card(?string $activeName = null): void {
     echo '    </form>';
     echo '  </div>';
     echo '</div>';
+    echo '<script>
+(function(){
+    var zone  = document.querySelector(".upload-zone");
+    var input = document.getElementById("inputFile");
+    if (!zone || !input) return;
+    ["dragenter","dragover"].forEach(function(ev){
+        zone.addEventListener(ev, function(e){ e.preventDefault(); zone.classList.add("dragover"); });
+    });
+    zone.addEventListener("dragleave", function(e){
+        if (!zone.contains(e.relatedTarget)) zone.classList.remove("dragover");
+    });
+    zone.addEventListener("drop", function(e){
+        e.preventDefault();
+        zone.classList.remove("dragover");
+        var files = e.dataTransfer.files;
+        if (!files.length) return;
+        try { var dt = new DataTransfer(); dt.items.add(files[0]); input.files = dt.files; }
+        catch(ex) { input.files = files; }
+        input.closest("form").submit();
+    });
+    zone.style.cursor = "default";
+})();
+</script>';
 }
 
 /* ---------- UI: Mapping ---------- */
@@ -432,7 +455,8 @@ document.getElementById("btn_delete_preset").addEventListener("click",function(e
 document.getElementById("preset_select").addEventListener("change",function(){
   var sel=this.value;
   var btn=document.getElementById("btn_delete_preset");
-  btn.textContent=sel?"Löschen: "+sel:"Preset löschen";
+  if(btn) btn.textContent=sel?"Löschen: "+sel:"Preset löschen";
+  if(sel) document.querySelector("[name='action'][value='apply_preset']").click();
 });
 </script>';
 

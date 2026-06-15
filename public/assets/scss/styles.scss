@@ -11,6 +11,13 @@
     border-color: #0d6efd;
     background: #f0f5ff;
   }
+
+  &.dragover {
+    border-color: #0d6efd;
+    border-style: solid;
+    background: #deeaff;
+    transform: scale(1.01);
+  }
 }
 
 .upload-icon {
