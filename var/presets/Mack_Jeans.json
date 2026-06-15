@@ -1,0 +1,21 @@
+{
+    "map": {
+        "firstname": "8",
+        "lastname": "7",
+        "street": "11",
+        "zip": "13",
+        "city": "14"
+    },
+    "has_header": true,
+    "skip_empty": true,
+    "cfg": {
+        "top": 10,
+        "left": 0,
+        "pad": 3,
+        "hgap": 0,
+        "vgap": 0,
+        "fontsize": 13,
+        "font": "folder:myriad_pro"
+    },
+    "ts": 1758799417
+}
