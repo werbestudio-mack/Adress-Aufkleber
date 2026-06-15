@@ -254,7 +254,7 @@ function render_mapping_form(array $args): void {
     /* ---- Presets ---- */
     echo '<div class="card shadow-sm">';
     echo '  <div class="card-header d-flex align-items-center justify-content-between py-2">';
-    echo '    <span class="fw-semibold"><i class="fa-solid fa-sliders me-2 text-primary"></i>Preset <i class="fa-solid fa-circle-question text-muted ms-1" style="font-size:.85rem;cursor:pointer" data-bs-toggle="popover" data-bs-trigger="click" data-bs-placement="right" data-bs-title="Was ist ein Preset?" data-bs-content="Ein Preset speichert deine aktuellen Einstellungen (Spalten-Zuordnung, Schrift, Raender) unter einem Namen. Beim naechsten Upload reicht es, das Preset auszuwaehlen – alles wird sofort wiederhergestellt. Ein Preset kann auch als Standard gesetzt werden, damit es bei jedem Datei-Upload automatisch angewendet wird."></i></span>';
+    echo '    <span class="fw-semibold"><i class="fa-solid fa-sliders me-2 text-primary"></i>Preset <i class="fa-solid fa-circle-question text-muted ms-1" style="font-size:.85rem;cursor:pointer" data-bs-toggle="popover" data-bs-trigger="click" data-bs-placement="right" data-bs-title="Was ist ein Preset?" data-bs-content="Ein Preset speichert deine Einstellungen (Spalten-Zuordnung, Schrift, Raender) unter einem Namen. Beim naechsten Upload reicht es, das Preset auszuwaehlen - alles wird sofort wiederhergestellt. Du kannst ein Preset auch als Standard setzen, damit es bei jedem Upload automatisch gilt."></i></span>';
     if ($defaultPreset) {
         echo '  <span class="badge bg-warning text-dark"><i class="fa-solid fa-star me-1"></i>Standard: '.h($defaultPreset).'</span>';
     }
