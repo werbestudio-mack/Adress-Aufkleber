@@ -16,6 +16,13 @@ cd Adress-Aufkleber
 composer install
 ```
 
+**Direkt ins aktuelle Verzeichnis klonen (kein Unterordner):**
+
+```bash
+git clone https://github.com/theandy/Adress-Aufkleber.git .
+composer install
+```
+
 Den Webserver auf das Verzeichnis `public/` als Document Root zeigen lassen.
 
 **Mit PHPs eingebautem Dev-Server (nur zum Testen):**
