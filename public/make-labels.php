@@ -456,7 +456,7 @@ document.getElementById("preset_select").addEventListener("change",function(){
   var sel=this.value;
   var btn=document.getElementById("btn_delete_preset");
   if(btn) btn.textContent=sel?"Löschen: "+sel:"Preset löschen";
-  if(sel) document.querySelector("[name='action'][value='apply_preset']").click();
+  if(sel) document.querySelector("[name=\'action\'][value=\'apply_preset\']").click();
 });
 </script>';
 
