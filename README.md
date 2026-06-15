@@ -21,7 +21,7 @@ composer install
 Das Zielverzeichnis muss leer sein:
 
 ```bash
-git clone https://github.com/theandy/Adress-Aufkleber.git .
+git clone git@github-arbeit:werbestudio-mack/Adress-Aufkleber.git .
 composer install
 ```
 
@@ -29,7 +29,7 @@ Ist das Verzeichnis nicht leer, geht es so:
 
 ```bash
 git init
-git remote add origin https://github.com/theandy/Adress-Aufkleber.git
+git remote add origin git@github-arbeit:werbestudio-mack/Adress-Aufkleber.git
 git pull origin master
 composer install
 ```
