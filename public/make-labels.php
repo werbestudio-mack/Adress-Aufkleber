@@ -576,7 +576,7 @@ if (isset($_FILES['input']) && $_FILES['input']['error'] === UPLOAD_ERR_OK) {
         if ($defaultPreset && ($pr = read_preset($defaultPreset))) {
             apply_preset_data($pr, $map, $hasHeaderDefault, $skipEmpty, $cfg, $maxCols);
             $selectedPreset = $defaultPreset;
-            $autoMessage    = "Standard-Preset „{$defaultPreset}" automatisch angewendet.";
+            $autoMessage    = "Standard-Preset '{$defaultPreset}' automatisch angewendet.";
         }
 
         render_upload_card($origName);
@@ -634,7 +634,7 @@ if ($stage === 'mapping') {
         $pr  = $sel ? read_preset($sel) : null;
         if ($pr) {
             apply_preset_data($pr, $map, $hasHeader, $skipEmpty, $cfg, $maxCols);
-            $msg = "Preset „{$sel}" angewendet.";
+            $msg = "Preset '{$sel}' angewendet.";
         } else {
             $msg = 'Kein gültiges Preset gewählt.';
         }
@@ -647,7 +647,7 @@ if ($stage === 'mapping') {
         $sel = $_POST['preset_select'] ?? '';
         if ($sel && in_array($sel, load_presets(), true)) {
             save_default_preset($sel);
-            $msg = "„{$sel}" ist jetzt das Standard-Preset – wird beim nächsten Upload automatisch angewendet.";
+            $msg = "'{$sel}' ist jetzt das Standard-Preset – wird beim naechsten Upload automatisch angewendet.";
         } elseif ($sel === '') {
             save_default_preset('');
             $msg = 'Standard-Preset entfernt.';
@@ -666,7 +666,7 @@ if ($stage === 'mapping') {
 
         if ($rawName === '' && $sel !== '') {
             if (!$overwrite) {
-                render_mapping_form($renderArgs + ['message'=>"Soll „{$sel}" überschrieben werden? Erneut auf „Speichern" klicken und bestätigen.",'selectedPreset'=>$sel]);
+                render_mapping_form($renderArgs + ['message'=>"Soll '{$sel}' ueberschrieben werden? Erneut auf Speichern klicken und bestaetigen.",'selectedPreset'=>$sel]);
                 require __DIR__ . '/partials/footer.php';
                 exit;
             }
@@ -692,7 +692,7 @@ if ($stage === 'mapping') {
                 $cfgSave[$k] = ($k === 'font') ? (string)$cfg[$k] : (float)$cfg[$k];
             }
             save_preset($name, ['map'=>$map,'has_header'=>$hasHeader,'skip_empty'=>$skipEmpty,'cfg'=>$cfgSave,'ts'=>time()]);
-            $msg = "Preset „{$name}" gespeichert.";
+            $msg = "Preset '{$name}' gespeichert.";
         }
         render_mapping_form(compact('csvPath','enc','delimiter','cfg','sample','maxCols','hasHeader','map','skipEmpty') + ['message'=>$msg,'selectedPreset'=>$name]);
         require __DIR__ . '/partials/footer.php';
@@ -715,7 +715,7 @@ if ($stage === 'mapping') {
         }
 
         $ok  = delete_preset($sel);
-        $msg = $ok ? "Preset „{$sel}" gelöscht." : "Preset „{$sel}" nicht gefunden.";
+        $msg = $ok ? "Preset '{$sel}' geloescht." : "Preset '{$sel}' nicht gefunden.";
         // Standard-Preset zurücksetzen falls gelöscht
         if ($ok && get_default_preset() === $sel) save_default_preset('');
         render_mapping_form($renderArgs + ['message'=>$msg,'selectedPreset'=>'']);
